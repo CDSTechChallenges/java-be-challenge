@@ -1,0 +1,10 @@
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (1, 'Adrian Swift', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (2, 'Jessie Mosciski', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (3, 'Mandie Huels DDS', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (4, 'George Dietrich', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (5, 'Brant Krajcik', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (6, 'Hilaria Rempel', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (7, 'Emory Hodkiewicz', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (8, 'Madelyn Rempel II', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (9, 'Oren Predovic', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
+INSERT INTO authors (id, name, created_at, updated_at) VALUES (10, 'Al Walsh', CURRENT_TIMESTAMP(), CURRENT_TIMESTAMP());
