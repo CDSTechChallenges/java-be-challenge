@@ -2,21 +2,29 @@ package com.codigodelsur.challenge.dao.model;
 
 import java.time.LocalDateTime;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "favorites")
 public class Favorite {
+  @Id
   @JsonProperty("id")
   private Long id;
 
   @JsonProperty("authorId")
-  private String authorId;
+  private Long authorId;
 
   @JsonProperty("postId")
-  private String postId;
+  private Long postId;
 
-  @JsonProperty("createdAt")
+  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
   private LocalDateTime createdAt;
 
-  @JsonProperty("updatedAt")
+  @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
   private LocalDateTime updatedAt;
 }

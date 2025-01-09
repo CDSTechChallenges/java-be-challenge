@@ -26,9 +26,9 @@ public class AuthorController {
     return authorService.getAll();
   }
 
-  @GetMapping("/{authorId}")
-  public Author getAuthorById(@PathVariable Long authorId) {
-    return authorService.getById(authorId);
+  @GetMapping("/{id}")
+  public Author getById(@PathVariable final Long id) {
+    return authorService.getById(id);
   }
 
   // /:authorId/posts
