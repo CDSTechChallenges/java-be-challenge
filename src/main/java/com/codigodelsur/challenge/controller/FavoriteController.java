@@ -24,7 +24,7 @@ public class FavoriteController {
   }
 
   @GetMapping("/{id}")
-  public Favorite getById(@PathVariable final Long id) {
+  public Favorite getById(@PathVariable("id") final Long id) {
     return favoriteService.getById(id);
   }
 

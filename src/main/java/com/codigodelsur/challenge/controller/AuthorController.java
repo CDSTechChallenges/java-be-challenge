@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.codigodelsur.challenge.dao.model.Author;
+import com.codigodelsur.challenge.dto.AuthorByIdResponse;
 import com.codigodelsur.challenge.service.AuthorService;
 
 import lombok.RequiredArgsConstructor;
@@ -27,10 +28,12 @@ public class AuthorController {
   }
 
   @GetMapping("/{id}")
-  public Author getById(@PathVariable final Long id) {
+  public AuthorByIdResponse getById(@PathVariable("id") final Long id) {
     return authorService.getById(id);
   }
 
-  // /:authorId/posts
-  // /:authorId/favorites
+  @GetMapping("/{id}/posts")
+  public Author getPosts(@PathVariable("id") final Long id) {
+    return authorService.getPostsByAuthorId(id);
+  }
 }

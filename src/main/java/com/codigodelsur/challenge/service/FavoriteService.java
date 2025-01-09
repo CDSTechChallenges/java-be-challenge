@@ -21,4 +21,8 @@ public class FavoriteService {
   public Favorite getById(Long id) {
     return favoriteRepository.findById(id).orElseThrow();
   }
+
+  public Long getCountByAuthorId(Long authorId) {
+    return favoriteRepository.countByAuthorId(authorId);
+  }
 }
