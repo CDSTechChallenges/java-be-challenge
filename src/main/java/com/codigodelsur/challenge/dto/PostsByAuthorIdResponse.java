@@ -17,6 +17,5 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostsByAuthorIdResponse extends Author {
-  Long favoriteCount;
   List<Post> posts;
 }

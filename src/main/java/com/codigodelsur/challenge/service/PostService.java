@@ -21,4 +21,8 @@ public class PostService {
   public Post getById(Long id) {
     return postRepository.findById(id).orElseThrow();
   }
+
+  public List<Post> getByAuthorId(Long id) {
+    return postRepository.getByAuthorId(id);
+  }
 }

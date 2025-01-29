@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.codigodelsur.challenge.dao.model.Author;
+import com.codigodelsur.challenge.dao.model.Post;
 import com.codigodelsur.challenge.dto.AuthorByIdResponse;
 import com.codigodelsur.challenge.dto.PostsByAuthorIdResponse;
 import com.codigodelsur.challenge.repository.AuthorRepository;
@@ -20,6 +21,9 @@ public class AuthorService {
 
   @Autowired
   private FavoriteService favoriteService;
+
+  @Autowired
+  private PostService postService;
 
   private final ObjectMapper mapper;
 
@@ -39,10 +43,10 @@ public class AuthorService {
 
   public PostsByAuthorIdResponse getPostsByAuthorId(Long id) {
     Author author = authorRepository.findById(id).orElseThrow();
-    Long favoriteCount = favoriteService.getCountByAuthorId(id);
+    List<Post> posts = postService.getByAuthorId(id);
 
     PostsByAuthorIdResponse response = mapper.convertValue(author, PostsByAuthorIdResponse.class);
-    response.setFavoriteCount(favoriteCount);
+    response.setPosts(posts);
 
     return response;
   }
