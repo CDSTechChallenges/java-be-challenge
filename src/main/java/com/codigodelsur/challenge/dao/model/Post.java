@@ -34,7 +34,7 @@ public class Post {
   private Set<Favorite> favorites;
 
   @ManyToOne
-  @JsonIgnore
+  @JsonProperty("author")
   private Author author;
 
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")
