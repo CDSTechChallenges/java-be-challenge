@@ -1,6 +1,7 @@
 package com.codigodelsur.challenge.service;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -43,7 +44,7 @@ public class AuthorService {
 
   public PostsByAuthorIdResponse getPostsByAuthorId(Long id) {
     Author author = authorRepository.findById(id).orElseThrow();
-    List<Post> posts = postService.getByAuthorId(id);
+    Set<Post> posts = postService.getByAuthorId(id);
 
     PostsByAuthorIdResponse response = mapper.convertValue(author, PostsByAuthorIdResponse.class);
     response.setPosts(posts);

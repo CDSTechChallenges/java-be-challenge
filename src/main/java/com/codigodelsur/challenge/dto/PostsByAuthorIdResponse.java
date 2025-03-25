@@ -1,9 +1,10 @@
 package com.codigodelsur.challenge.dto;
 
-import java.util.List;
+import java.util.Set;
 
 import com.codigodelsur.challenge.dao.model.Author;
 import com.codigodelsur.challenge.dao.model.Post;
+import com.fasterxml.jackson.annotation.JsonProperty;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,5 +18,6 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 public class PostsByAuthorIdResponse extends Author {
-  List<Post> posts;
+  @JsonProperty("posts")
+  Set<Post> posts;
 }

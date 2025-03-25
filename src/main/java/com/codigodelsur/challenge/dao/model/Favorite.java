@@ -3,6 +3,7 @@ package com.codigodelsur.challenge.dao.model;
 import java.time.LocalDateTime;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Entity;
@@ -18,11 +19,11 @@ public class Favorite {
   private Long id;
 
   @ManyToOne
-  @JsonProperty
+  @JsonIgnore
   private Author author;
 
   @ManyToOne
-  @JsonProperty
+  @JsonIgnore
   private Post post;
 
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")

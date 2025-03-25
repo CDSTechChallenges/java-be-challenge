@@ -4,6 +4,7 @@ import java.time.LocalDateTime;
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import jakarta.persistence.Basic;
@@ -29,10 +30,11 @@ public class Post {
   private String content;
 
   @OneToMany(mappedBy = "post")
+  @JsonIgnore
   private Set<Favorite> favorites;
 
   @ManyToOne
-  @JsonProperty
+  @JsonIgnore
   private Author author;
 
   @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd HH:mm")

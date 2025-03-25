@@ -1,6 +1,7 @@
 package com.codigodelsur.challenge.service;
 
 import java.util.List;
+import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
@@ -22,7 +23,7 @@ public class PostService {
     return postRepository.findById(id).orElseThrow();
   }
 
-  public List<Post> getByAuthorId(Long id) {
+  public Set<Post> getByAuthorId(Long id) {
     return postRepository.getByAuthorId(id);
   }
 }
