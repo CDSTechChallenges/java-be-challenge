@@ -12,7 +12,6 @@ import com.codigodelsur.challenge.AbstractTest;
 
 public class AuthorControllerTest extends AbstractTest {
   @Test
-  @Disabled
   public void getByPublicId_shouldReturn200() throws Exception {
     // When
     ResultActions result = this.mockMvc.perform(get("/api/v1/authors/{id}", 1));
