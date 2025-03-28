@@ -1,6 +1,5 @@
 package com.codigodelsur.challenge.controller;
 
-import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.test.web.servlet.ResultActions;
 
